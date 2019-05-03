@@ -1,0 +1,37 @@
+{
+  "name": "hyperlink-parser",
+  "version": "0.0.1",
+  "description": "An util to parse the URLs in Node.js and the browsers.",
+  "main": "lib/HyperlinkParser.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {
+    "@john-yuan/dev-browserify-builder": "^1.0.1",
+    "@john-yuan/dev-browserify-watcher": "^1.0.6",
+    "@john-yuan/dev-server": "^1.2.0",
+    "mocha": "^6.1.4"
+  },
+  "scripts": {
+    "test": "node scripts/build.js && mocha",
+    "dev": "node scripts/dev.js",
+    "build": "node scripts/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/john-yuan/HyperlinkParser.js.git"
+  },
+  "keywords": [
+    "parseURL",
+    "url-parsing",
+    "url-parser",
+    "hyperlink",
+    "hyperlink-parser"
+  ],
+  "author": "JOHN YUAN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/john-yuan/HyperlinkParser.js/issues"
+  },
+  "homepage": "https://github.com/john-yuan/HyperlinkParser.js#readme"
+}
