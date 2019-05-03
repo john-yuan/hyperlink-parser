@@ -168,6 +168,26 @@ describe('methods', function () {
         });
     });
 
+    it('Hyperlink.prototype.setPathName("")', function () {
+        var hyperlink = HyperlinkParser.parse('http://example.com/test/');
+
+        hyperlink.setPathName('');
+
+        assert.deepEqual(hyperlink, {
+            protocol: 'http:',
+            username: '',
+            password: '',
+            host: 'example.com',
+            hostname: 'example.com',
+            port: '',
+            pathname: '/',
+            search: '',
+            hash: '',
+            href: 'http://example.com/',
+            origin: 'http://example.com'
+        });
+    });
+
     it('Hyperlink.prototype.setSearch', function () {
         var hyperlink = HyperlinkParser.parse('http://example.com');
 
