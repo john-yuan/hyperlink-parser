@@ -1,6 +1,6 @@
 {
   "name": "hyperlink-parser",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha",
   "description": "An util to parse the URLs in Node.js and the browsers.",
   "main": "lib/HyperlinkParser.js",
   "directories": {
