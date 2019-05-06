@@ -20,6 +20,62 @@ describe('basic', function () {
         });
     });
 
+
+
+    it('http://test.example.com?search', function () {
+        var hyperlink = HyperlinkParser.parse('http://test.example.com?search');
+
+        assert.deepEqual(hyperlink, {
+            protocol: 'http:',
+            username: '',
+            password: '',
+            host: 'test.example.com',
+            hostname: 'test.example.com',
+            port: '',
+            pathname: '/',
+            search: '?search',
+            hash: '',
+            href: 'http://test.example.com/?search',
+            origin: 'http://test.example.com'
+        });
+    });
+
+    it('http://test.example.com#hash', function () {
+        var hyperlink = HyperlinkParser.parse('http://test.example.com#hash');
+
+        assert.deepEqual(hyperlink, {
+            protocol: 'http:',
+            username: '',
+            password: '',
+            host: 'test.example.com',
+            hostname: 'test.example.com',
+            port: '',
+            pathname: '/',
+            search: '',
+            hash: '#hash',
+            href: 'http://test.example.com/#hash',
+            origin: 'http://test.example.com'
+        });
+    });
+
+    it('http://test.example.com?search#hash', function () {
+        var hyperlink = HyperlinkParser.parse('http://test.example.com?search#hash');
+
+        assert.deepEqual(hyperlink, {
+            protocol: 'http:',
+            username: '',
+            password: '',
+            host: 'test.example.com',
+            hostname: 'test.example.com',
+            port: '',
+            pathname: '/',
+            search: '?search',
+            hash: '#hash',
+            href: 'http://test.example.com/?search#hash',
+            origin: 'http://test.example.com'
+        });
+    });
+
     it('http://example.com/', function () {
         var hyperlink = HyperlinkParser.parse('http://example.com/');
 
