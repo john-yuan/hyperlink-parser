@@ -1,21 +1,29 @@
 {
   "name": "hyperlink-parser",
   "version": "0.0.1-alpha.1",
-  "description": "An util to parse the URLs in Node.js and the browsers.",
-  "main": "lib/HyperlinkParser.js",
-  "directories": {
-    "lib": "lib"
+  "description": "The util to parse URL.",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src",
+    "clean": "node ./scripts/clean.js",
+    "build": "npm run clean && tsc && node ./scripts/bundle.js"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
     "@john-yuan/dev-browserify-builder": "^1.0.1",
-    "@john-yuan/dev-browserify-watcher": "^1.0.6",
-    "@john-yuan/dev-server": "^1.2.0",
-    "mocha": "^6.1.4"
-  },
-  "scripts": {
-    "test": "node scripts/build.js && mocha",
-    "dev": "node scripts/dev.js",
-    "build": "node scripts/build.js"
+    "@types/jest": "^26.0.8",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
+    "eslint": "^7.5.0",
+    "jest": "^26.2.1",
+    "typescript": "^3.9.7"
   },
   "repository": {
     "type": "git",
@@ -33,5 +41,9 @@
   "bugs": {
     "url": "https://github.com/john-yuan/HyperlinkParser.js/issues"
   },
-  "homepage": "https://github.com/john-yuan/HyperlinkParser.js#readme"
+  "homepage": "https://github.com/john-yuan/HyperlinkParser.js#readme",
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "hyperlink-parser": "0.0.1-alpha.2"
+  }
 }
