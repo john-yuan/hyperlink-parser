@@ -1,6 +1,6 @@
 {
   "name": "hyperlink-parser",
-  "version": "0.0.1-alpha.1",
+  "version": "1.0.0-alpha.1",
   "description": "The util to parse URL.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
