@@ -16,15 +16,14 @@ npm i hyperlink-parser
 ## Example
 
 ```js
-import HyperlinkParser from 'hyperlink-parser';
+import HyperlinkParser from 'hyperlink-parser'
 
-const url = 'https://user:pass@example.com:8080/search?q=javascript#results';
-const hyperlink = HyperlinkParser.parse(url);
+const link = HyperlinkParser.parse('https://user:pass@example.com:8080/search?q=javascript#results")
 
-console.log(HyperlinkParser.stringify(hyperlink) === url); // true
+console.log(link)
 ```
 
-The `hyperlink` is a plain object which contains the following data:
+The result is a plain object containing following properties.
 
 ```json
 {
@@ -42,37 +41,26 @@ The `hyperlink` is a plain object which contains the following data:
 }
 ```
 
-Also you can import `parse` and `stringify` independently like below:
+The stringify method is designed to build a url from an object, for example:
 
-```js
-import { parse, stringify, Hyperlink } from 'hyperlink-parser';
 ```
+const url = HyperlinkParser.stringify({
+  "href": "https://user:pass@example.com:8080/search?q=javascript#results",
+  "origin": "https://example.com:8080",
+  "protocol": "https:",
+  "username": "user",
+  "password": "pass",
+  "host": "example.com:8080",
+  "hostname": "example.com",
+  "port": "8080",
+  "pathname": "/search",
+  "search": "?q=javascript",
+  "hash": "#results"
+})
 
-`Hyperlink` is the interface for hyperlink of which the definition is:
+console.log(url)
 
-```ts
-interface Hyperlink {
-  href: string;
-  origin: string;
-  protocol: string;
-  username: string;
-  password: string;
-  host: string;
-  hostname: string;
-  port: string;
-  pathname: string;
-  search: string;
-  hash: string;
-}
-```
-
-Plus, the bundle is an UMD module, so you can load it with the script tag:
-
-```html
-<script src="./dist/HyperlinkParser.js"></script>
-<script>
-  var hyperlink = HyperlinkParser.parse(location.href);
-</script>
+// https://user:pass@example.com:8080/search?q=javascript#results
 ```
 
 ## License
