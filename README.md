@@ -43,7 +43,7 @@ The result is a plain object containing following properties.
 
 The stringify method is designed to build a url from an object, for example:
 
-```
+```js
 const url = HyperlinkParser.stringify({
   "href": "https://user:pass@example.com:8080/search?q=javascript#results",
   "origin": "https://example.com:8080",
