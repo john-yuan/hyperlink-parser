@@ -111,4 +111,34 @@ describe('parse', () => {
     expect(parse('https://example.com?search').href).toBe('https://example.com/?search');
     expect(parse('https://example.com#results').href).toBe('https://example.com/#results');
   });
+
+  it('should parse relative url correctly', () => {
+    expect(parse('/the/pathname?search=keyword#results')).toStrictEqual({
+      href: '/the/pathname?search=keyword#results',
+      origin: '',
+      protocol: '',
+      username: '',
+      password: '',
+      host: '',
+      hostname: '',
+      port: '',
+      pathname: '/the/pathname',
+      search: '?search=keyword',
+      hash: '#results'
+    });
+
+    expect(parse('//example.com/the/pathname?search=keyword#results')).toStrictEqual({
+      href: '//example.com/the/pathname?search=keyword#results',
+      origin: '//example.com',
+      protocol: '',
+      username: '',
+      password: '',
+      host: 'example.com',
+      hostname: 'example.com',
+      port: '',
+      pathname: '/the/pathname',
+      search: '?search=keyword',
+      hash: '#results'
+    });
+  });
 });

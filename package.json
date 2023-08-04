@@ -1,16 +1,24 @@
 {
   "name": "hyperlink-parser",
-  "version": "1.0.0-alpha.2",
-  "description": "The util to parse URL.",
+  "version": "1.0.0-alpha.3",
+  "description": "A tool for parsing hyperlinks",
   "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": [
+    "build",
+    "dist",
+    "es",
+    "src"
+  ],
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "lint": "eslint src",
     "clean": "node ./scripts/clean.js",
-    "build": "npm run clean && tsc && node ./scripts/bundle.js"
+    "build": "npm run clean && tsc && node ./scripts/bundle.js",
+    "build:es": "tsc --target esnext --module esnext --outDir es"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -31,11 +39,11 @@
     "url": "git+https://github.com/john-yuan/HyperlinkParser.js.git"
   },
   "keywords": [
-    "parseURL",
-    "url-parsing",
-    "url-parser",
+    "url",
+    "href",
+    "link",
     "hyperlink",
-    "hyperlink-parser"
+    "parser"
   ],
   "author": "JOHN YUAN",
   "license": "MIT",

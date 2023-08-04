@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es3",
+    "target": "es5",
     "module": "commonjs",
     "declaration": true,
     "outDir": "./build",
@@ -8,8 +8,6 @@
     "strict": true,
     "esModuleInterop": true,
     "allowUmdGlobalAccess": true,
-    "inlineSourceMap": true,
-    "inlineSources": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   }

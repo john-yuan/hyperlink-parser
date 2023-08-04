@@ -10,6 +10,8 @@ export const stringify = (hyperlink: Partial<Hyperlink>): string => {
 
   if (protocol) {
     url = url + protocol + '//';
+  } else if (hostname) {
+    url += '//';
   }
 
   if (username) {
