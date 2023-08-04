@@ -1,6 +1,6 @@
 {
   "name": "hyperlink-parser",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0",
   "description": "A tool for parsing hyperlinks",
   "main": "build/index.js",
   "module": "es/index.js",
