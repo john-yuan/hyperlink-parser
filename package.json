@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/john-yuan/HyperlinkParser.js.git"
+    "url": "git+https://github.com/john-yuan/hyperlink-parser.git"
   },
   "keywords": [
     "url",
@@ -48,7 +48,7 @@
   "author": "JOHN YUAN",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/john-yuan/HyperlinkParser.js/issues"
+    "url": "https://github.com/john-yuan/hyperlink-parser/issues"
   },
-  "homepage": "https://github.com/john-yuan/HyperlinkParser.js#readme"
+  "homepage": "https://github.com/john-yuan/hyperlink-parser#readme"
 }

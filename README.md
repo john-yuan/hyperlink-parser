@@ -1,7 +1,6 @@
-# HyperlinkParser.js
+# hyperlink-parser
 
 [![npm version](https://img.shields.io/npm/v/hyperlink-parser.svg)](https://www.npmjs.com/package/hyperlink-parser)
-[![Build Status](https://travis-ci.org/john-yuan/HyperlinkParser.js.svg?branch=master)](https://travis-ci.org/john-yuan/HyperlinkParser.js)
 [![install size](https://packagephobia.now.sh/badge?p=hyperlink-parser)](https://packagephobia.now.sh/result?p=hyperlink-parser)
 [![npm downloads](https://img.shields.io/npm/dm/hyperlink-parser.svg)](http://npm-stat.com/charts.html?package=hyperlink-parser)
 
